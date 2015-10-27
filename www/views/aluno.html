@@ -1,0 +1,21 @@
+<div ng-controller="alunoCtrl as ctrl">
+  <table class="table table-bordered table-hover table-align">
+    <thead>
+      <tr class="strong">
+        <th>Nome</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ctrl.aluno.nome}}</td>
+        <td>{{ctrl.aluno.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <a ng-href="#/" class="btn btn-primary">Voltar</a>
+  <button ng-click="ctrl.removeAluno()" class="btn btn-danger pull-right">Remover</button>
+
+  <a ng-href="#/edit/{{ctrl.aluno._id}}" class="btn btn-primary col-xs-12 table-align">Editar</a>
+</div>

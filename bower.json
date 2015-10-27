@@ -1,0 +1,12 @@
+{
+  "name": "appAlunos",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.1.0"
+  },
+  "dependencies": {
+    "ngCordova": "~0.1.20-alpha",
+    "bootstrap": "~3.3.5",
+    "angular-route": "~1.4.7"
+  }
+}

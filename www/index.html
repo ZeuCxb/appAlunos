@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script> 
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- Modules -->
+    <script src="lib/angular-route/angular-route.min.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+
+    <!-- Services -->
+    <script src="js/services/AlunosApi.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/alunos.js"></script>
+    <script src="js/controllers/aluno.js"></script>
+    <script src="js/controllers/addAlunos.js"></script>
+  </head>
+  <body ng-app="Alunos">
+    <ion-pane>
+        <ion-header-bar class="bar-stable">
+            <h1 class="title">Alunos</h1>
+        </ion-header-bar>
+        <ion-content class="container">
+          <div ng-view=""></div>
+        </ion-content>
+    </ion-pane>
+</body>
+</html>

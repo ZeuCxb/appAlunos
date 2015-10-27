@@ -1,0 +1,13 @@
+<form class="form-horizontal" name="alunoForm" ng-controller="addAlunosCtrl as ctrl" novalidate>
+
+  <input type="text" placeholder="Nome..." ng-model="ctrl.aluno.nome" class="col-xs-12" required>
+
+  <input type="email" placeholder="Email..." ng-model="ctrl.aluno.email" class="col-xs-12" required>
+
+  <button ng-click="ctrl.add()"  ng-hide="ctrl.aluno._id" ng-disabled="alunoForm.$invalid" class="btn btn-primary col-xs-12 table-align">Adicionar</button>
+
+  <button ng-click="ctrl.edit()"  ng-show="ctrl.aluno._id" ng-disabled="alunoForm.$invalid || alunoForm.$pristine" class="btn btn-primary col-xs-12 table-align">Editar</button>
+
+  <a ng-href="{{ctrl.url}}" class="btn btn-primary col-xs-12 table-align">Voltar</a>
+
+</form>
