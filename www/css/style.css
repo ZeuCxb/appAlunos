@@ -9,3 +9,7 @@
 .click {
 	cursor: pointer;
 }
+
+.align-center {
+	text-align: center !important;
+}

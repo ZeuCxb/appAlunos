@@ -1,16 +1,20 @@
-<table class="table table-bordered table-hover table-align" ng-controller="alunosCtrl as ctrl">
-  <thead>
-    <tr class="strong">
-      <th>Nome</th>
-      <th>Email</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="aluno in ctrl.alunos" ng-click="ctrl.redirect('{{aluno._id}}')">
-      <td class="click">{{aluno.nome}}</td>
-      <td class="click">{{aluno.email}}</td>
-    </tr>
-  </tbody>
-</table>
+<div ng-controller="alunosCtrl as ctrl"> 
+  <table class="table table-bordered table-hover table-align" ng-show="ctrl.alunos.length > 0">
+    <thead>
+      <tr class="strong">
+        <th>Nome</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="aluno in ctrl.alunos" ng-click="ctrl.redirect('{{aluno._id}}')">
+        <td class="click">{{aluno.nome}}</td>
+        <td class="click">{{aluno.email}}</td>
+      </tr>
+    </tbody>
+  </table>
 
-<a ng-href="#/add" class="btn btn-primary col-xs-12">Adicionar</a>
+  <span class="align-center" ng-hide="ctrl.alunos.length > 0"><h5>Nenhum aluno cadastrado :(</h5></span>
+
+  <a ng-href="#/add" class="btn btn-primary col-xs-12">Adicionar</a>
+</div>
